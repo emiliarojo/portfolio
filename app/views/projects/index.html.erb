@@ -25,7 +25,7 @@
     <div class="projects">
       <% @projects.each do |project| %>
         <div data-controller="project-card-hover">
-          <a href="<%= project.link %>" class="project-card" style="background-image: url(<%= project.photo %>)"
+          <a href="<%= project.link %>" class="project-card" style="background-image: url(<%= rails_blob_url(project.photo) %>)"
             data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo">
             <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
               <div class="project-card-title">
