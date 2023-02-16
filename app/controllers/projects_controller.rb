@@ -3,14 +3,14 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
-  def show
-    @project = Project.find(params[:id])
-  end
+  # def show
+  #   @project = Project.find(params[:id])
+  # end
 
 
-  private
+  # private
 
-  def project_params
-    params.require(:project).permit(:name, :link, :description, :photo)
-  end
+  # def project_params
+  #   params.require(:project).permit(:name, :link, :description, :photo)
+  # end
 end

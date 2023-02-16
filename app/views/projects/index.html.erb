@@ -22,22 +22,54 @@
     <div class="projects-header">
       My Portfolio
     </div>
+
+
     <div class="projects">
-      <% @projects.each do |project| %>
+
         <div data-controller="project-card-hover">
-          <a href="<%= project.link %>" class="project-card" style="background-image: url(<%= rails_blob_url(project.photo) %>)"
-            data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo">
+          <a href="https://grantchichester.me/" class="project-card" style="background-image:url(<%= image_path 'projects/Grant/Grant-background.png' %>"
+           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo">
             <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
               <div class="project-card-title">
-                <%= project.name %>
+                Grant Chichester
               </div>
               <div class="project-card-description">
-                <%= project.description %>
+                Logo Design
               </div>
             </div>
           </a>
         </div>
-      <% end %>
+
+        <div data-controller="project-card-hover">
+          <a href="https://www.fan-find.com/" class="project-card" style="background-image:url(<%= image_path 'projects/FanFind/FanFind-background.png' %>"
+           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo">
+            <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
+              <div class="project-card-title">
+                Fan Find
+              </div>
+              <div class="project-card-description">
+                Mobile Web Application
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div data-controller="project-card-hover">
+          <a href="https://shart-jpates2.herokuapp.com/" class="project-card" style="background-image:url(<%= image_path 'projects/shART/shART-background.png' %>"
+           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo">
+            <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
+              <div class="project-card-title">
+                shART
+              </div>
+              <div class="project-card-description">
+                Web Application
+              </div>
+            </div>
+          </a>
+        </div>
+
     </div>
+
+
   </div>
 </div>
