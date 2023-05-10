@@ -222,7 +222,7 @@ html, body {
 }
 
 .about-image {
-  width: 70%;
+  width: 80%;
   height: 100%;
   overflow: hidden;
   z-index: 0;
@@ -279,7 +279,7 @@ html, body {
 .about-text {
   font-family: 'Source Sans Pro';
   font-weight: 400;
-  font-size: 1.75em;
+  font-size: 1.4em;
   text-align: right;
   color: #FFFFFF;
 }
@@ -557,6 +557,7 @@ html, body {
   font-family: 'Right Grotesk';
   font-size: 5em;
   font-weight: 750;
+  text-transform: uppercase;
   color: #1B1C1E;
   text-align: start;
 }
