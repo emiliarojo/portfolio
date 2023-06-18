@@ -45,7 +45,7 @@ html, body {
 
 .home-navbar a {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 600;
   text-decoration: none;
   color: #000000;
@@ -281,7 +281,7 @@ html, body {
   font-family: 'Source Sans Pro';
   font-weight: 400;
   font-size: 1.5em;
-  text-align: justify;
+  text-align: initial;
   color: #FFFFFF;
 }
 
@@ -561,6 +561,7 @@ html, body {
   text-transform: uppercase;
   color: #1B1C1E;
   text-align: start;
+  line-height: 90%;
 }
 
 .work-text {
