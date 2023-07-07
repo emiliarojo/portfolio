@@ -30,6 +30,7 @@ html, body {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 }
 
 .home-navbar {
@@ -90,37 +91,7 @@ html, body {
   max-height: 100%;
 }
 
-@media (max-width:340px) {
-  .home-navbar {
-    display: none;
-  }
-  #home-nav-menu {
-    display: inherit;
-    z-index: 10;
-  }
-  .home-title {
-    margin-left: 0%;
-    align-self: center;
-  }
-  #name {
-    font-size: 2em;
-    text-align: center;
-  }
-  #occupation {
-    font-size: 1em;
-    text-align: center;
-  }
-  .home-image {
-    margin-top: 0%;
-    flex-direction: column;
-    align-self: center;
-    justify-content: center;
-    height: 60%;
-    padding-inline-end: 0%;
-  }
-}
-
-@media (min-width: 341px) and (max-width: 575px) {
+@media (max-width:449px) {
   .home-navbar {
     display: none;
   }
@@ -138,6 +109,37 @@ html, body {
   }
   #occupation {
     font-size: 1.5em;
+    text-align: center;
+  }
+  .home-image {
+    margin-top: 0%;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    height: 60%;
+    width: 75%;
+    padding-inline-end: 0%;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 575px) {
+  .home-navbar {
+    display: none;
+  }
+  #home-nav-menu {
+    display: inherit;
+    z-index: 10;
+  }
+  .home-title {
+    margin-left: 0%;
+    align-self: center;
+  }
+  #name {
+    font-size: 4em;
+    text-align: center;
+  }
+  #occupation {
+    font-size: 2em;
     text-align: center;
   }
   .home-image {
@@ -164,9 +166,11 @@ html, body {
   }
   #name {
     font-size: 5em;
+    text-align: center;
   }
   #occupation {
     font-size: 2.5em;
+    text-align: center;
   }
   .home-image {
     margin-top: 5%;
@@ -177,7 +181,7 @@ html, body {
   }
 }
 
-@media (min-width: 768px) and (max-width:991px) {
+@media (min-width: 768px) and (max-width:1100px) {
   .home-navbar {
     width: 60%;
   }
@@ -348,43 +352,49 @@ html, body {
   }
 }
 
-@media (min-width: 576px) and (max-width:767px) {
+@media (min-width: 576px) and (max-width:859px) {
   .about-header {
     font-size: 4em;
+    text-align: center;
   }
   .blue-line-image {
     display: none;
   }
   .about-text {
-    font-size: 1.3em;
+    font-size: 1.2em;
+    text-align: center;
   }
   .me-image {
-    height: 60%;
+    height: 50%;
   }
 }
 
-@media (min-width: 768px) and (max-width:991px) {
+// @media (max-height:750px) {
+//   .about-title {
+//     font-size: 5em;
+//   }
+//   .blue-line-image {
+//     width: 6em;
+//   }
+//   .about-text {
+//     font-size: 1.3em;
+//   }
+// }
+
+@media (min-width: 860px) and (max-width:1160px) {
   .about-header {
     font-size: 5em;
   }
   .blue-line-image {
-    width: 9em;
+    width: 6em;
   }
   .about-text {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   .me-image {
-    height: 80%;
+    height: 75%;
   }
 }
-
-@media (min-width: 992px) and (max-width:1150px) {
-  .about-text {
-    font-size: 1.5em;
-  }
-}
-
-
 
 .skills-container {
   height: 100vh;
