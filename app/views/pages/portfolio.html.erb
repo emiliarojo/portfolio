@@ -27,6 +27,20 @@
     <div class="projects">
 
         <div data-controller="project-card-hover">
+          <a href="https://covert-one.vercel.app/" class="project-card" style="background-image:url(<%= image_path 'projects/COVERT/COVERT-background.png' %>"
+           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
+            <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
+              <div class="project-card-title">
+                COVERT
+              </div>
+              <div class="project-card-description">
+                Web Application
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div data-controller="project-card-hover">
           <a href="https://grantchichester.me/" class="project-card" style="background-image:url(<%= image_path 'projects/Grant/Grant-background.png' %>"
            data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
             <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
@@ -67,6 +81,7 @@
             </div>
           </a>
         </div>
+
 
     </div>
 
