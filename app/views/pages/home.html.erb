@@ -2,12 +2,12 @@
 
   <section id="home">
     <div class="home-container">
-      <div class="home-navbar">
+      <nav class="home-navbar">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#work">Portfolio</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
       <nav id="home-nav-menu">
         <div class="navbar">
           <div class="nav-container">
@@ -28,11 +28,11 @@
         </div>
       </nav>
       <div class="home-title">
-        <div id="name">Emilia Rojo</div>
-        <div id="occupation">Designer & Developer</div>
+        <h1 id="name">Emilia Rojo</h1>
+        <h2 id="occupation">Designer & Developer</h2>
       </div>
       <div class="home-image">
-        <%= image_tag "home/Avatar.png", class:"avatar-image" %>
+        <%= image_tag "home/Avatar.png", class:"avatar-image", alt: "Emilia Rojo Logo" %>
       </div>
     </div>
   </section>
@@ -46,12 +46,12 @@
         </div>
         <div class="about-info">
           <div class="about-title">
-            <div class="about-header">About Me</div>
+            <h1 class="about-header">About Me</h1>
             <div class="about-title-line">
               <%= image_tag "about/Blue_Line.png", class:"blue-line-image" %>
             </div>
           </div>
-          <div class="about-text">
+          <p class="about-text">
             I'm a passionate UX/UI designer, web designer, graphic designer,
             and full-stack web developer. With a comprehensive skill set spanning
             various disciplines, I am dedicated to crafting seamless and impactful
@@ -62,7 +62,7 @@
             computer programming, and aesthetic sensibility, I bring ideas to
             life that engage users and exceed expectations. Let's collaborate and
             bring your vision to reality.
-          </div>
+          </p>
         </div>
       </div>
     </div>
@@ -73,23 +73,23 @@
 
       <div class="skills-content">
         <div class="skills-info">
-          <div class="skills-header">
+          <h1 class="skills-header">
             Skills
-          </div>
-          <div class="skills-text">
+          </h1>
+          <h3 class="skills-text">
             Here are some technologies I work with
-          </div>
+          </h3>
         </div>
         <div class="skills-icons">
-          <%= image_tag "skills/Figma.png", class:"tech-icon" %>
-          <%= image_tag "skills/Procreate.png", class:"tech-icon" %>
-          <%= image_tag "skills/HTML.png", class:"tech-icon" %>
-          <%= image_tag "skills/CSS.png", class:"tech-icon" %>
-          <%= image_tag "skills/Sass.png", class:"tech-icon" %>
-          <%= image_tag "skills/JavaScript.png", class:"tech-icon" %>
-          <%= image_tag "skills/React.png", class:"tech-icon" %>
-          <%= image_tag "skills/Rails.png", class:"tech-icon" %>
-          <%= image_tag "skills/SQL.png", class:"tech-icon" %>
+          <%= image_tag "skills/Figma.png", class:"tech-icon", alt: "Figma Logo" %>
+          <%= image_tag "skills/Procreate.png", class:"tech-icon", alt: "Procreate Logo" %>
+          <%= image_tag "skills/HTML.png", class:"tech-icon", alt: "HTML Logo" %>
+          <%= image_tag "skills/CSS.png", class:"tech-icon", alt: "CSS Logo" %>
+          <%= image_tag "skills/Sass.png", class:"tech-icon", alt: "Sass Logo" %>
+          <%= image_tag "skills/JavaScript.png", class:"tech-icon", alt: "JavaScript Logo" %>
+          <%= image_tag "skills/React.png", class:"tech-icon", alt: "React Logo" %>
+          <%= image_tag "skills/Rails.png", class:"tech-icon", alt: "Rails Logo" %>
+          <%= image_tag "skills/SQL.png", class:"tech-icon", alt: "SQL Logo" %>
         </div>
       </div>
     </div>
@@ -100,21 +100,21 @@
 
       <div class="work-content">
         <div class="work-info">
-          <div class="work-header">
+          <h1 class="work-header">
             As a designer & developer,
             <br>
             I wear many hats
-          </div>
-          <div class="work-text">
+          </h1>
+          <h3 class="work-text">
             Check out some of my work
-          </div>
-          <a href="/portfolio" class="profile-button">
+          </h3>
+          <a href="/portfolio" class="profile-button" text="Projects Page">
             View Portfolio
             <i class="fa-sharp fa-solid fa-arrow-right"></i>
           </a>
         </div>
         <div class="work-image">
-          <%= image_tag "work/Avatar-Hat.GIF", class:"hat-gif" %>
+          <%= image_tag "work/Avatar-Hat.GIF", class:"hat-gif", alt: "Emilia Rojo Logo GIF" %>
         </div>
       </div>
     </div>
@@ -127,13 +127,13 @@
           <a href="mailto:info@emiliarojo.com" class="contact-email">
             <i class="fa-sharp fa-solid fa-envelope"></i> info@emiliarojo.com
           </a>
-          <a href="https://www.linkedin.com/in/emilia-rojo/" hclass="contact-linkedin" target="_blank">
+          <a href="https://www.linkedin.com/in/emilia-rojo/" hclass="contact-linkedin" target="_blank" text="LinkedIn Profile Link">
             <i class="fa-brands fa-linkedin"></i> emilia-rojo
           </a>
-          <a href="https://github.com/emiliarojo" class="contact-github" target="_blank">
+          <a href="https://github.com/emiliarojo" class="contact-github" target="_blank" text="Github Profile Link">
             <i class="fa-brands fa-github"></i> emiliarojo
           </a>
-          <a href="https://dribbble.com/emiliarojo" class="contact-dribbble" target="_blank">
+          <a href="https://dribbble.com/emiliarojo" class="contact-dribbble" target="_blank" text="Dribbble Profile Link">
             <i class="fa-solid fa-basketball"></i> emiliarojo
           </a>
         </div>
