@@ -1,0 +1,11 @@
+.arrow-return {
+  color: #1B1C1E;
+  font-size: 2rem;
+  position: sticky;
+  top: 25px;
+  left: 35px;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: #7DC6CC;
+  }
+}
