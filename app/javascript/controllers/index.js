@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import BgColorChangeController from "./bg_color_change_controller"
+application.register("bg-color-change", BgColorChangeController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
