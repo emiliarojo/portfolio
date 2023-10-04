@@ -1,26 +1,34 @@
-import { Controller } from 'stimulus'
+import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  static targets = ['section']
-  static colors = ['#FFFFFF', '#7DC6CC', '#FFFFFF', '#7DC6CC', '#FFFFFF']
+  static targets = ['section'];
+  static colors = ['#FFFFFF', '#1B1C1E', '#FFFFFF', '#7DC6CC', '#FFFFFF'];
 
   connect() {
-    this.updateBackgroundColor()
-    window.addEventListener('scroll', this.updateBackgroundColor.bind(this))
+    this.updateBackgroundColor();
+    window.addEventListener('scroll', this.updateBackgroundColor.bind(this));
   }
 
   disconnect() {
-    window.removeEventListener('scroll', this.updateBackgroundColor.bind(this))
+    window.removeEventListener('scroll', this.updateBackgroundColor.bind(this));
   }
 
   updateBackgroundColor() {
-    const scrollFromTop = window.scrollY
-    const sections = this.sectionTargets
+    const scrollFromTop = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const sections = this.sectionTargets;
 
     for (let i = 0; i < sections.length; i++) {
-      if (scrollFromTop <= sections[i].offsetTop) {
-        document.body.style.backgroundColor = this.constructor.colors[i]
-        break
+      const section = sections[i];
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (
+        scrollFromTop + viewportHeight * 0.1 >= sectionTop &&
+        scrollFromTop <= sectionTop + sectionHeight
+      ) {
+        document.body.style.backgroundColor = this.constructor.colors[i];
+        break;
       }
     }
   }

@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AddBoxShadowController from "./add_box_shadow_controller"
+application.register("add-box-shadow", AddBoxShadowController)
+
 import BgColorChangeController from "./bg_color_change_controller"
 application.register("bg-color-change", BgColorChangeController)
 

@@ -11,10 +11,10 @@
   width: auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .skills-info {
-  margin-left: 5%;
   width: 25%;
   height: auto;
 }
@@ -24,7 +24,7 @@
   font-size: 7em;
   font-weight: 750;
   text-transform: uppercase;
-  color: #1B1C1E;
+  color: #7DC6CC;
   text-align: start;
   width: 100%;
   height: auto;
@@ -35,22 +35,37 @@
   font-weight: 400;
   font-size: 2.5em;
   text-align: start;
-  color: #1B1C1E;
+  color: #7DC6CC;
 }
 
 .skills-icons {
-  width: 75%;
-  height: auto;
-  margin: 10%;
-  align-self: center;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills-icon {
+  width: 30%;
+  p {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    color: #7DC6CC;
+    visibility: hidden;
+    transition: visibility 0.1s ease-in-out;
+  }
+  &:hover {
+    p {
+      visibility: visible;
+    }
+  }
 }
 
 .tech-icon {
-  width: 30%;
+  width: 100%;
   height: auto;
 }
 
