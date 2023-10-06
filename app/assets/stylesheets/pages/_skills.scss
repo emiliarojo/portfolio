@@ -1,14 +1,9 @@
 .skills-container {
-  height: 100vh;
-  width: 100%;
-  // background-color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
+  padding-top: 125px;
+  padding-bottom: 125px;
 }
 
 .skills-content {
-  height: 100%;
-  width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -24,7 +19,7 @@
   font-size: 7em;
   font-weight: 750;
   text-transform: uppercase;
-  color: #7DC6CC;
+  color: $light-blue;
   text-align: start;
   width: 100%;
   height: auto;
@@ -35,7 +30,7 @@
   font-weight: 400;
   font-size: 2.5em;
   text-align: start;
-  color: #7DC6CC;
+  color: $light-blue;
 }
 
 .skills-icons {
@@ -53,7 +48,7 @@
     font-weight: 700;
     font-size: 1.5em;
     text-align: center;
-    color: #7DC6CC;
+    color: $light-blue;
     visibility: hidden;
     transition: visibility 0.1s ease-in-out;
   }
@@ -67,89 +62,4 @@
 .tech-icon {
   width: 100%;
   height: auto;
-}
-
-@media (max-width:340px) {
-  .skills-content {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .skills-info {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-  }
-  .skills-header {
-    font-size: 3em;
-    text-align: center;
-  }
-  .skills-text {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  .skills-icons {
-    width: 75%;
-  }
-  .tech-icon {
-    width: 50%;
-  }
-}
-
-@media (min-width: 341px) and (max-width: 575px) {
-  .skills-content {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .skills-info {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-  }
-  .skills-header {
-    font-size: 4em;
-    text-align: center;
-  }
-  .skills-text {
-    font-size: 1.25em;
-    text-align: center;
-  }
-  .skills-icons {
-    width: 60%;
-  }
-  .tech-icon {
-    width: 40%;
-  }
-}
-
-@media (min-width: 576px) and (max-width:767px) {
-  .skills-content {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .skills-info {
-    margin-left: 30%;
-    margin-right: 30%;
-    width: 40%;
-  }
-  .skills-header {
-    font-size: 4.5em;
-    text-align: center;
-  }
-  .skills-text {
-    font-size: 1.25em;
-    text-align: center;
-  }
-}
-
-@media (min-width: 768px) and (max-width:991px) {
-  .skills-header {
-    font-size: 6em;
-  }
-  .skills-text {
-    font-size: 1.75em;
-  }
-}
-
-@media (min-width: 992px) and (max-width:1150px) {
-
 }

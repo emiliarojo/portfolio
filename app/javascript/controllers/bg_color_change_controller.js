@@ -1,8 +1,8 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  static targets = ['section'];
-  static colors = ['#FFFFFF', '#1B1C1E', '#FFFFFF', '#7DC6CC', '#FFFFFF'];
+  static targets = ['section', 'main'];
+  static colors = ['#FFFFFF', '#1B1C1E', '#FFFFFF', '#7DC6CC'];
 
   connect() {
     this.updateBackgroundColor();
@@ -24,10 +24,10 @@ export default class extends Controller {
       const sectionHeight = section.clientHeight;
 
       if (
-        scrollFromTop + viewportHeight * 0.1 >= sectionTop &&
+        scrollFromTop + viewportHeight * 0.15 >= sectionTop &&
         scrollFromTop <= sectionTop + sectionHeight
       ) {
-        document.body.style.backgroundColor = this.constructor.colors[i];
+        this.mainTarget.style.backgroundColor = this.constructor.colors[i];
         break;
       }
     }
