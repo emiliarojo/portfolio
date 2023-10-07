@@ -1,4 +1,4 @@
-<div class="scroll-container" data-controller="scroll-to-section">
+<div data-controller="scroll-to-section">
   <main data-controller="bg-color-change" data-bg-color-change-target="main">
     <div class="home-page">
       <section id="home" data-bg-color-change-target="section">
@@ -167,9 +167,44 @@
 
   <div class="scroll-contact" data-scroll-to-section-target="footer">
     <footer id="contact">
-      <div class="contact-container container-fluid">
+      <div class="contact-container container-fluid" data-controller="contact-form">
         <h1 style="color: white;">Contact Me</h1>
+        <div class="form-container">
+          <form>
+            <%# <div class="field relative z-0">
+                <input type="text" id="first_name" data-contact-form-target="firstName"
+                      class="block py-2.5 px-0 w-full text-sm text-white-900 bg-transparent border-0 border-b-2 border-white-300 appearance-none dark:text-white dark:border-white-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                <label for="first_name" class="absolute text-sm text-white-500 dark:text-white-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                  First Name
+                </label>
+            </div> %>
 
+            <div class="floating-input">
+              <input type="text" id="first_name" placeholder=" " data-contact-form-target="firstName">
+              <label for="first_name">First Name</label>
+            </div>
+
+            <div class="floating-input">
+              <input type="text" id="last_name" placeholder=" " data-contact-form-target="lastName">
+              <label for="last_name">Last Name</label>
+            </div>
+
+            <div class="floating-input">
+              <input type="text" id="email" placeholder=" " data-contact-form-target="email">
+              <label for="email">Email</label>
+            </div>
+
+            <div class="floating-input">
+              <textarea type="text" id="message" placeholder="Message" data-contact-form-target="message"></textarea>
+              <%# <label for="message">Message</label> %>
+            </div>
+
+            <button type="button" class="btn-black-rounded" data-action="click->contact-form#send">Submit</button>
+          </form>
+        </div>
+        <div class="success-message d-none">
+          <h1>Your message was successfully sent! I'll be in touch shortly.</h1>
+        </div>
       </div>
     </footer>
   </div>
