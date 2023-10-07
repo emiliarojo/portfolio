@@ -1,160 +1,177 @@
-<main data-controller="bg-color-change" data-bg-color-change-target="main">
-  <div class="home-page">
-    <section id="home" data-bg-color-change-target="section">
-      <div class="home-container">
-        <nav class="home-navbar">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#work">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <nav id="home-nav-menu">
-          <div class="navbar">
-            <div class="nav-container">
-              <input class="checkbox" type="checkbox" name="" id="" />
-              <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
+<div class="scroll-container" data-controller="scroll-to-section">
+  <main data-controller="bg-color-change" data-bg-color-change-target="main">
+    <div class="home-page">
+      <section id="home" data-bg-color-change-target="section">
+        <div class="home-container container-fluid">
+          <nav class="home-navbar">
+            <%= link_to "About", 'javascript:void(0);', data: {
+                                                                action: "click->scroll-to-section#scrollSection",
+                                                                value: "about"
+                                                              } %>
+            <%= link_to "Skills", 'javascript:void(0);', data: {
+                                                                action: "click->scroll-to-section#scrollSection",
+                                                                value: "skills"
+                                                              } %>
+            <%= link_to "Portfolio", 'javascript:void(0);', data: {
+                                                                action: "click->scroll-to-section#scrollSection",
+                                                                value: "work"
+                                                              } %>
+            <%= link_to "Contact", 'javascript:void(0);', data: {
+                                                                action: "click->scroll-to-section#scrollSection",
+                                                                value: "footer"
+                                                              } %>
+          </nav>
+          <nav id="home-nav-menu">
+            <div class="navbar">
+              <div class="nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#skills">Skills</a>
+                  <a href="#work">Portfolio</a>
+                  <a href="#contact">Contact</a>
+                </div>
               </div>
-              <div class="menu-items">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#work">Portfolio</a>
-                <a href="#contact">Contact</a>
-              </div>
             </div>
-          </div>
-        </nav>
-        <div class="home-info">
-          <div class="home-title">
-            <h1 id="name">Emilia Rojo</h1>
-            <h2 id="occupation">Designer & Developer</h2>
-          </div>
-          <%= image_tag "home/Avatar.png", class:"avatar-image", alt: "Emilia Rojo Logo" %>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" data-bg-color-change-target="section">
-      <div class="about-container" data-controller="add-box-shadow">
-
-        <div class="about-content">
-          <%= image_tag "about/Me.jpg", class:"image-me", data: { add_box_shadow_target: "animatedElement" } %>
-          <div class="about-info">
-            <div class="about-title">
-              <h1 class="about-header">About Me</h1>
-              <%#= image_tag "about/Blue_Line.png", class:"image-blue-line" %>
+          </nav>
+          <div class="home-info">
+            <div class="home-title">
+              <h1 id="name">Emilia Rojo</h1>
+              <h2 id="occupation">Designer & Developer</h2>
             </div>
-            <p class="about-text">
-              I'm a passionate UX/UI designer, graphic designer,
-              and full-stack software developer. With a comprehensive skill set spanning
-              various disciplines, I am dedicated to crafting seamless and impactful
-              digital experiences. Whether it's designing intuitive user interfaces,
-              developing visually stunning websites, creating captivating graphic
-              designs, or building robust web applications, I thrive on the intersection
-              of creativity and technology. By blending my expertise in design thinking,
-              computer programming, and aesthetic sensibility, I bring ideas to
-              life that engage users and exceed expectations. Let's collaborate and
-              bring your vision to reality.
-            </p>
-            <div class="about-my-links">
-              <a href="https://www.linkedin.com/in/emilia-rojo/" hclass="contact-linkedin" target="_blank" text="LinkedIn Profile Link">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/emiliarojo" class="contact-github" target="_blank" text="Github Profile Link">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://dribbble.com/emiliarojo" class="contact-dribbble" target="_blank" text="Dribbble Profile Link">
-                <i class="fa-solid fa-basketball"></i>
-              </a>
-            </div>
+            <%= image_tag "home/Avatar.png", class:"avatar-image", alt: "Emilia Rojo Logo" %>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills" data-bg-color-change-target="section">
-      <div class="skills-container">
+      <section id="about" data-bg-color-change-target="section" data-scroll-to-section-target="about">
+        <div class="about-container container-fluid" data-controller="add-box-shadow">
 
-        <div class="skills-content">
-          <div class="skills-info">
-            <h1 class="skills-header">
-              Skills
+          <div class="about-content">
+            <%= image_tag "about/Me.jpg", class:"image-me", data: { add_box_shadow_target: "animatedElement" } %>
+            <div class="about-info">
+              <div class="about-title">
+                <h1 class="about-header">About Me</h1>
+                <%#= image_tag "about/Blue_Line.png", class:"image-blue-line" %>
+              </div>
+              <p class="about-text">
+                Hey there! My name's Emilia and I'm a UX/UI designer, graphic designer,
+                and full-stack software developer. With a comprehensive skill set spanning
+                various disciplines, I am dedicated to crafting seamless and impactful
+                digital experiences. Whether it's designing intuitive user interfaces,
+                developing visually stunning websites, creating captivating graphic
+                designs, or building robust web applications, I thrive on the intersection
+                of creativity and technology. I bring ideas to life by combining design thinking,
+                programming expertise, and an eye for aesthetics. Let's collaborate and
+                turn your vision into reality!
+              </p>
+              <div class="about-my-links">
+                <a href="https://www.linkedin.com/in/emilia-rojo/" class="linkedin" target="_blank" text="LinkedIn Profile Link">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/emiliarojo" class="github" target="_blank" text="Github Profile Link">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://dribbble.com/emiliarojo" class="dribbble" target="_blank" text="Dribbble Profile Link">
+                  <i class="fa-solid fa-basketball"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" data-bg-color-change-target="section" data-scroll-to-section-target="skills">
+        <div class="skills-container container-fluid">
+
+          <div class="skills-content">
+            <div class="skills-info">
+              <h1 class="skills-header">
+                Skills
+              </h1>
+              <h3 class="skills-text">
+                Here are some technologies I work with
+              </h3>
+            </div>
+            <div class="skills-icons">
+              <div class="skills-icon">
+                <%= image_tag "skills/Figma.png", class:"tech-icon", alt: "Figma Logo" %>
+                <p>Figma</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/Procreate.png", class:"tech-icon", alt: "Procreate Logo" %>
+                <p>Procreate</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/HTML.png", class:"tech-icon", alt: "HTML Logo" %>
+                <p>HTML</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/CSS.png", class:"tech-icon", alt: "CSS Logo" %>
+                <p>CSS</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/Sass.png", class:"tech-icon", alt: "Sass Logo" %>
+                <p>Sass</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/JavaScript.png", class:"tech-icon", alt: "JavaScript Logo" %>
+                <p>JavaScript</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/React.png", class:"tech-icon", alt: "React Logo" %>
+                <p>React</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/Rails.png", class:"tech-icon", alt: "Rails Logo" %>
+                <p>Rails</p>
+              </div>
+              <div class="skills-icon">
+                <%= image_tag "skills/SQL.png", class:"tech-icon", alt: "SQL Logo" %>
+                <p>SQL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" data-bg-color-change-target="section" data-scroll-to-section-target="work">
+        <div class="work-container container-fluid">
+          <div class="work-info">
+            <h1 class="work-header">
+              As a designer & developer,
+              <br>
+              I wear many hats
             </h1>
-            <h3 class="skills-text">
-              Here are some technologies I work with
+            <h3 class="work-text">
+              Check out some of my work
             </h3>
-          </div>
-          <div class="skills-icons">
-            <div class="skills-icon">
-              <%= image_tag "skills/Figma.png", class:"tech-icon", alt: "Figma Logo" %>
-              <p>Figma</p>
+            <a href="/portfolio" class="profile-button" text="Projects Page">
+              View Portfolio
+              <i class="fa-sharp fa-solid fa-arrow-right"></i>
+            </a>
             </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/Procreate.png", class:"tech-icon", alt: "Procreate Logo" %>
-              <p>Procreate</p>
+            <div class="container-hat-gif">
+              <%= image_tag "work/Avatar-Hat.GIF", class:"hat-gif", alt: "Emilia Rojo Logo GIF" %>
             </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/HTML.png", class:"tech-icon", alt: "HTML Logo" %>
-              <p>HTML</p>
-            </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/CSS.png", class:"tech-icon", alt: "CSS Logo" %>
-              <p>CSS</p>
-            </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/Sass.png", class:"tech-icon", alt: "Sass Logo" %>
-              <p>Sass</p>
-            </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/JavaScript.png", class:"tech-icon", alt: "JavaScript Logo" %>
-              <p>JavaScript</p>
-            </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/React.png", class:"tech-icon", alt: "React Logo" %>
-              <p>React</p>
-            </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/Rails.png", class:"tech-icon", alt: "Rails Logo" %>
-              <p>Rails</p>
-            </div>
-            <div class="skills-icon">
-              <%= image_tag "skills/SQL.png", class:"tech-icon", alt: "SQL Logo" %>
-              <p>SQL</p>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+  </main>
 
-    <section id="work" data-bg-color-change-target="section">
-      <div class="work-container">
-        <div class="work-info">
-          <h1 class="work-header">
-            As a designer & developer,
-            <br>
-            I wear many hats
-          </h1>
-          <h3 class="work-text">
-            Check out some of my work
-          </h3>
-          <a href="/portfolio" class="profile-button" text="Projects Page">
-            View Portfolio
-            <i class="fa-sharp fa-solid fa-arrow-right"></i>
-          </a>
-          </div>
-          <div class="container-hat-gif">
-            <%= image_tag "work/Avatar-Hat.GIF", class:"hat-gif", alt: "Emilia Rojo Logo GIF" %>
-          </div>
-      </div>
-    </section>
-  </div>
-</main>
-<section id="contact">
-  <div class="contact-container">
-    <h1 style="color: white;">Contact Me</h1>
+  <div class="scroll-contact" data-scroll-to-section-target="footer">
+    <footer id="contact">
+      <div class="contact-container container-fluid">
+        <h1 style="color: white;">Contact Me</h1>
 
+      </div>
+    </footer>
   </div>
-</section>
+
+</div>
