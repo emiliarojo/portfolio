@@ -19,5 +19,8 @@ application.register("hello", HelloController)
 import ProjectCardHoverController from "./project_card_hover_controller"
 application.register("project-card-hover", ProjectCardHoverController)
 
+import ScrollRevealController from "./scroll_reveal_controller"
+application.register("scroll-reveal", ScrollRevealController)
+
 import ScrollToSectionController from "./scroll_to_section_controller"
 application.register("scroll-to-section", ScrollToSectionController)

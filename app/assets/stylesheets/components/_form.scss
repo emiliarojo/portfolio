@@ -1,9 +1,8 @@
 .form-container {
-  margin-left: 56px;
-  width: 480px;
   form {
     display: flex;
     flex-direction: column;
+
     button {
       align-self: center;
     }
@@ -13,68 +12,78 @@
 .floating-input {
   position: relative;
   margin-bottom: 32px;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #7DC6CC; /* Border color when focused */
+      color: #7DC6CC;
+      -tw-ring-inset: none;
+    }
+  }
+
+  textarea {
+    border: 1px solid #ffffff;
+    height: 160px;
+    margin-top: 32px;
+  }
+
+  label {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 10px;
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    color: #ffffff;
+    transition: transform 0.3s, font-size 0.3s, top 0.3s;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    transform: translateY(-24px);
+    font-size: 14px;
+    color: #7DC6CC;
+    top: 0;
+  }
+
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    transform: translateY(-24px);
+    font-size: 14px;
+    color: #7DC6CC;
+    top: 0;
+  }
 }
 
-.floating-input input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 1px solid #ffffff;
-  background-color: transparent;
-  color: #ffffff;
-  transition: border-color 0.3s;
+/* Override Tailwind CSS focus style for the specified elements */
+[multiple]:focus,
+[type=date]:focus,
+[type=datetime-local]:focus,
+[type=email]:focus,
+[type=month]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=search]:focus,
+[type=tel]:focus,
+[type=text]:focus,
+[type=time]:focus,
+[type=url]:focus,
+[type=week]:focus,
+select:focus,
+textarea:focus {
+  /* Reset focus styles */
+  border-color: initial; /* Reset border color */
+  box-shadow: none !important; /* Remove box-shadow */
+  outline: none !important; /* Remove outline */
+  outline-offset: initial; /* Reset outline offset */
 }
-
-.floating-input textarea {
-  width: 100%;
-  height: 160px;
-  margin-top: 32px;
-  padding: 10px;
-  font-family: 'Source Sans Pro';
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  border: 1px solid #ffffff;
-  background-color: black;
-  transition: border-color 0.3s;
-}
-
-.floating-input textarea::placeholder {
-  font-family: 'Source Sans Pro';
-  font-size: 16px;
-  color: #ffffff;
-}
-
-/* Floating label styles */
-.floating-input label {
-  position: absolute;
-  pointer-events: none;
-  left: 0;
-  top: 10px;
-  font-family: 'Source Sans Pro';
-  font-size: 16px;
-  color: #ffffff;
-  transition: transform 0.3s, font-size 0.3s, top 0.3s;
-}
-
-/* When the input is focused */
-.floating-input input:focus, textarea:focus {
-  border-color: #7DC6CC; /* Border color when focused */
-  color: #7DC6CC;
-}
-
-.floating-input input:focus + label,
-.floating-input input:not(:placeholder-shown) + label {
-  transform: translateY(-24px);
-  font-size: 14px;
-  color: #7DC6CC;
-  top: 0;
-}
-
-// .floating-input textarea:focus+ label,
-// .floating-textarea textarea:not(:placeholder-shown) + label {
-//   font-size: 14px;
-//   color: #7DC6CC;
-//   top: 0;
-// }
