@@ -23,6 +23,7 @@
     background-color: transparent;
     color: #ffffff;
     transition: border-color 0.3s;
+    pointer-events: auto;
 
     &:focus {
       border-color: #7DC6CC; /* Border color when focused */
