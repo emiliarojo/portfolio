@@ -16,6 +16,9 @@ application.register("contact-form", ContactFormController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import MenuController from "./menu_controller"
+application.register("menu", MenuController)
+
 import ProjectCardHoverController from "./project_card_hover_controller"
 application.register("project-card-hover", ProjectCardHoverController)
 

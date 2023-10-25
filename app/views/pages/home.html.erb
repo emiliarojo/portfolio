@@ -21,6 +21,28 @@
                                                                 value: "footer"
                                                               } %>
           </nav>
+          <div class="home-menu-container" data-controller="menu">
+              <span class="home-menu-link" href="" data-action="click->menu#showMenu">Menu</span>
+              <nav class="home-menu" data-menu-target="menu">
+                <span class="home-menu-exit" data-action="click->menu#hideMenu">X</span>
+                <%= link_to "About", 'javascript:void(0);', data: {
+                                                  action: "click->scroll-to-section#scrollSection",
+                                                  value: "about"
+                                                } %>
+                <%= link_to "Skills", 'javascript:void(0);', data: {
+                                                                    action: "click->scroll-to-section#scrollSection",
+                                                                    value: "skills"
+                                                                  } %>
+                <%= link_to "Portfolio", 'javascript:void(0);', data: {
+                                                                    action: "click->scroll-to-section#scrollSection",
+                                                                    value: "work"
+                                                                  } %>
+                <%= link_to "Contact", 'javascript:void(0);', data: {
+                                                                    action: "click->scroll-to-section#scrollSection",
+                                                                    value: "footer"
+                                                                  } %>
+              </nav>
+          </div>
           <div class="home-info">
             <div class="home-title">
               <h1>Emilia Rojo</h1>
