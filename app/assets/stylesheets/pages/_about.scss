@@ -10,7 +10,8 @@
 }
 
 .image-me {
-  height: 640px;
+  max-width: 30%;
+  height: max-content;
   margin: 24px 48px;
   transition: box-shadow 1s ease-in;
 }
@@ -20,7 +21,8 @@
 }
 
 .about-info {
-  margin: 0px 48px 24px;
+  max-width: 70%;
+  padding: 0px 48px 24px;
 }
 
 .about-title {
@@ -29,18 +31,19 @@
 
 .about-header {
   font-family: 'Right Grotesk';
-  font-size: 7em;
+  font-size: 6em;
   font-weight: 750;
   text-transform: uppercase;
   color: $light-blue;
   text-align: left;
+  white-space: nowrap;
 }
 
 .about-text {
   // margin-top: 64px;
   font-family: 'Source Sans Pro';
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 1.5em;
   text-align: initial;
   color: $light-blue;
 }
@@ -58,48 +61,5 @@
     &:hover {
       color: $light-blue;
     }
-  }
-}
-
-@media (max-width: 1200px) {
-  .about-header {
-    font-size: 6em;
-  }
-  .about-text {
-    font-size: 1.4em;
-  }
-  .about-my-links {
-    a {
-      font-size: 2.7em;
-    }
-  }
-}
-
-@media (max-width:1020px) {
-  .about-header {
-    font-size: 5.5em;
-  }
-  .about-text {
-    font-size: 1.2em;
-  }
-  .image-me {
-    height: 480px;
-  }
-  .about-my-links {
-    a {
-      font-size: 2em;
-    }
-  }
-}
-
-@media (max-width: 880px) {
-  .about-header {
-    font-size: 4.8em;
-  }
-  .about-text {
-    font-size: 1.1em;
-  }
-  .image-me {
-    height: 440px;
   }
 }
