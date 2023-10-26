@@ -59,9 +59,96 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  margin-top: -400px;
+  margin-top: -600px;
 }
 
 .hat-gif {
-  width: 800px;
+  width: 70%;
+}
+
+@media (max-width: 1200px) {
+  .work-header {
+    font-size: 4em;
+  }
+  .work-text {
+    font-size: 2.2em;
+  }
+  .container-hat-gif {
+    margin-top: -400px;
+  }
+}
+
+@media (max-width: 950px) {
+  .container-hat-gif {
+    margin-top: -300px;
+  }
+}
+
+@media (max-width: 850px) {
+  .work-header {
+    font-size: 3em;
+  }
+  .work-text {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+  .container-hat-gif {
+    margin-top: -200px;
+  }
+  .profile-button {
+    font-size: 1.2em;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .work-header {
+    font-size: 2.8em;
+  }
+  .work-text {
+    font-size: 1.8em;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .work-info {
+    padding: 0px 24px;
+  }
+  .container-hat-gif {
+    margin-top: -100px;
+    justify-content: center;
+  }
+  .hat-gif {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hat-gif {
+    width: 100%;
+  }
+  .work-header {
+    font-size: 2.5em;
+  }
+  .work-text {
+    font-size: 1.4em;
+  }
+  .profile-button {
+    font-size: 1.1em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 365px) {
+  .work-header {
+    font-size: 2.2em;
+  }
+  .work-text {
+    font-size: 1.3em;
+  }
+  .profile-button {
+    font-size: 1em;
+    padding: 6px 12px;
+  }
 }

@@ -48,7 +48,9 @@
               <h1>Emilia Rojo</h1>
               <h2>Designer & Developer</h2>
             </div>
-            <%= image_tag "home/Avatar.png", class:"avatar-image", alt: "Emilia Rojo Logo" %>
+            <div class="home-img-container">
+              <%= image_tag "home/Avatar.png", class:"avatar-image", alt: "Emilia Rojo Logo" %>
+            </div>
           </div>
         </div>
       </section>
@@ -57,20 +59,29 @@
         <div class="about-container container-fluid" data-controller="add-box-shadow">
 
           <div class="about-content">
-            <%= image_tag "about/Me.jpg", class:"image-me", data: { add_box_shadow_target: "animatedElement" } %>
+            <div class="about-img-container">
+              <%= image_tag "about/Me.jpg", class:"image-me", data: { add_box_shadow_target: "animatedElement" } %>
+            </div>
             <div class="about-info">
               <div class="about-title">
                 <h1 class="about-header">About Me</h1>
                 <%#= image_tag "about/Blue_Line.png", class:"image-blue-line" %>
               </div>
+              <div class="about-img-circle-container">
+                <%= image_tag "about/Me-circle.png", class:"image-me-circle" %>
+              </div>
               <p class="about-text">
                 Hey there! My name's Emilia and I'm a UX/UI designer, graphic designer,
-                and full-stack software developer. With a comprehensive skill set spanning
-                various disciplines, I am dedicated to crafting seamless and impactful
-                digital experiences. Whether it's designing intuitive user interfaces,
-                developing visually stunning websites, creating captivating graphic
-                designs, or building robust web applications, I thrive on the intersection
-                of creativity and technology. I bring ideas to life by combining design thinking,
+                and full-stack software developer.
+                <br><br>
+                With a comprehensive skill set spanning various disciplines, I am
+                dedicated to crafting seamless and impactful digital experiences.
+                Whether it's designing intuitive user interfaces, developing visually
+                stunning websites, creating captivating graphic designs, or building
+                robust web applications, I thrive on the intersection of creativity
+                and technology.
+                <br><br>
+                I bring ideas to life by combining design thinking,
                 programming expertise, and an eye for aesthetics. Let's collaborate and
                 turn your vision into reality!
               </p>
@@ -156,7 +167,7 @@
               Check out some of my work
             </h3>
             <a href="/portfolio" class="profile-button" text="Projects Page">
-              View Portfolio
+              View Portfolio &nbsp
               <i class="fa-sharp fa-solid fa-arrow-right"></i>
             </a>
             </div>

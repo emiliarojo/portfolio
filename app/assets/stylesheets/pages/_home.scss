@@ -63,7 +63,7 @@ main {
 }
 
 .home-menu {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
@@ -111,10 +111,13 @@ main {
   }
 }
 
-.avatar-image {
+.home-img-container {
   max-width: 50%;
-  height: max-content;
   align-self: center;
+}
+.avatar-image {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 1030px) {
@@ -162,7 +165,7 @@ main {
   .home-menu-container {
     display: block;
   }
-  .avatar-image {
+  .home-img-container {
     max-width: 70%;
   }
 }
@@ -176,7 +179,7 @@ main {
       font-size: 2.2em;
     }
   }
-  .avatar-image {
+  .home-img-container {
     max-width: 80%;
   }
 }
@@ -190,7 +193,7 @@ main {
       font-size: 1.9em;
     }
   }
-  .avatar-image {
+  .home-img-container {
     max-width: 100%;
   }
   .home-menu-link {
@@ -207,7 +210,7 @@ main {
       font-size: 1.7em;
     }
   }
-  .avatar-image {
+  .home-img-container {
     max-width: 125%;
   }
 }

@@ -26,3 +26,44 @@
   text-align: right;
   margin-bottom: 24px;
 }
+
+@media (max-width: 880px) {
+  .contact-header {
+    font-size: 6em;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-header {
+    font-size: 5em;
+  }
+  .floating-input {
+    input, textarea, label {
+      font-size: 14px;
+    }
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      transform: translateY(-18px);
+      font-size: 12px;
+    }
+
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+      transform: translateY(-18px);
+      font-size: 12px;
+
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-header {
+    font-size: 3em;
+  }
+}

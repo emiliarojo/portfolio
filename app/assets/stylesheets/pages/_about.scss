@@ -9,11 +9,25 @@
   justify-content: space-between;
 }
 
-.image-me {
+.about-img-container {
   max-width: 30%;
-  height: max-content;
+  height: fit-content;
   margin: 24px 48px;
+}
+.about-img-circle-container {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  margin: 24px 0px;
+}
+
+.image-me {
+  width: 100%;
   transition: box-shadow 1s ease-in;
+}
+
+.image-me-circle {
+  width: 50%;
 }
 
 .blue-box-shadow {
@@ -61,5 +75,87 @@
     &:hover {
       color: $light-blue;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-header {
+    font-size: 5.5em;
+  }
+  .about-text {
+    font-size: 1.3em;
+  }
+  .about-my-links a {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-header {
+    font-size: 4.5em;
+  }
+  .about-text {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 880px) {
+  .about-img-container {
+    display: none;
+  }
+  .about-content {
+    justify-content: center;
+  }
+  .about-title {
+    width: 100%;
+  }
+  .about-header {
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .about-img-circle-container{
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-info {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-info {
+    max-width: 100%;
+    padding: 0px;
+  }
+  .about-header {
+    font-size: 3.5em;
+  }
+  .about-my-links a {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 300px) {
+  .about-info {
+    max-width: 100%;
+  }
+  .about-header {
+    font-size: 2.5em;
+  }
+  .about-text {
+    font-size: 1em;
+  }
+  .about-my-links a {
+    font-size: 1.5em;
   }
 }
