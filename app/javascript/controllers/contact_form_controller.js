@@ -14,7 +14,7 @@ export default class extends Controller {
     const templateId = "template_zk2g3dv"; // Replace with your Email.JS template ID
 
     const formElement = document.querySelector(".form-container");
-    const successMessage = document.querySelector(".success-message");
+    const successMessage = document.querySelector(".contact-success-message");
 
     const templateParams = {
       firstName: this.firstNameTarget.value,
@@ -27,8 +27,8 @@ export default class extends Controller {
       function (response) {
         console.log("Sent successfuly", response);
         // Add your success handling logic here, e.g., show a success message
-        formElement.classList.add("d-none");
-        successMessage.classList.remove("d-none");
+        formElement.style.display = "none";
+        successMessage.style.display = "flex";
       },
       function (error) {
         console.error("Failed to send", error);

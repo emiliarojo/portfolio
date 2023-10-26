@@ -27,6 +27,22 @@
   margin-bottom: 24px;
 }
 
+.contact-success-message {
+  width: 80%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: 'Right Grotesk';
+    font-size: 6em;
+    font-weight: 750;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
 @media (max-width: 880px) {
   .contact-header {
     font-size: 6em;
@@ -36,6 +52,11 @@
 @media (max-width: 700px) {
   .contact-header {
     font-size: 5em;
+  }
+  .contact-success-message {
+    h1 {
+      font-size: 4em;
+    }
   }
   .floating-input {
     input, textarea, label {
@@ -65,5 +86,10 @@
 @media (max-width: 380px) {
   .contact-header {
     font-size: 3em;
+  }
+  .contact-success-message {
+    h1 {
+      font-size: 3em;
+    }
   }
 }
