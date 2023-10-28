@@ -1,9 +1,21 @@
 @import "bootstrap/scss/bootstrap";
 
 @font-face {
-  font-family: 'Right Grotesk';
+  font-family: 'Right Grotesk Compact';
   src: url('RightGrotesk-CompactBlack.otf');
 }
+
+@font-face {
+  font-family: 'Right Grotesk Medium';
+  src: url('RightGrotesk-Medium.otf');
+}
+
+
+@font-face {
+  font-family: 'Right Grotesk CD';
+  src: url('RightGrotesk-CompactDark.otf');
+}
+
 
 // @import "font-awesome";
 
