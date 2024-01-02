@@ -1,72 +1,70 @@
-<div class="projects-container">
-  <%= link_to raw("<i class='fa-sharp fa-solid fa-arrow-left'></i>"), root_path, class:"arrow-return" %>
-  <div class="projects-content">
-    <div class="projects-header">
-      My Portfolio
+<div class="projects-page">
+  <div class="projects-container">
+    <%= link_to raw("<i class='fa-sharp fa-solid fa-arrow-left'></i>"), root_path, class:"arrow-return" %>
+    <div class="projects-content">
+      <div class="projects-header">
+        My Portfolio
+      </div>
+
+
+      <div class="projects">
+
+          <div data-controller="project-card-hover">
+            <a href="https://enigmatic-sea-22620-a039438de6c0.herokuapp.com/" class="project-card" style="background-image:url(<%= image_path 'projects/RailYard/RailYard-background.png' %>"
+            data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
+              <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
+                <div class="project-card-title">
+                  RailYard
+                </div>
+                <div class="project-card-description">
+                  Full Stack Web Application Development
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div data-controller="project-card-hover">
+            <a href="https://covert-one.vercel.app/" class="project-card" style="background-image:url(<%= image_path 'projects/COVERT/COVERT-background.png' %>"
+            data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
+              <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
+                <div class="project-card-title">
+                  COVERT
+                </div>
+                <div class="project-card-description">
+                  Front End Web Application Development
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div data-controller="project-card-hover">
+            <a href="https://www.fan-find.com/" class="project-card" style="background-image:url(<%= image_path 'projects/FanFind/FanFind-background.png' %>"
+            data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
+              <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
+                <div class="project-card-title">
+                  Fan Find
+                </div>
+                <div class="project-card-description">
+                  Full Stack Mobile Web Application Development
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div data-controller="project-card-hover">
+            <a href="https://grantchichester.me/" class="project-card" style="background-image:url(<%= image_path 'projects/Grant/Grant-background.png' %>"
+            data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
+              <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
+                <div class="project-card-title">
+                  Grant Chichester
+                </div>
+                <div class="project-card-description">
+                  Logo Design
+                </div>
+              </div>
+            </a>
+          </div>
+      </div>
     </div>
-
-
-    <div class="projects">
-
-        <div data-controller="project-card-hover">
-          <a href="https://enigmatic-sea-22620-a039438de6c0.herokuapp.com/" class="project-card" style="background-image:url(<%= image_path 'projects/RailYard/RailYard-background.png' %>"
-           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
-            <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
-              <div class="project-card-title">
-                RailYard <br> (Under Construction)
-              </div>
-              <div class="project-card-description">
-                Full Stack Web Application Development
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div data-controller="project-card-hover">
-          <a href="https://covert-one.vercel.app/" class="project-card" style="background-image:url(<%= image_path 'projects/COVERT/COVERT-background.png' %>"
-           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
-            <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
-              <div class="project-card-title">
-                COVERT
-              </div>
-              <div class="project-card-description">
-                Front-End Web Application Development
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div data-controller="project-card-hover">
-          <a href="https://grantchichester.me/" class="project-card" style="background-image:url(<%= image_path 'projects/Grant/Grant-background.png' %>"
-           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
-            <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
-              <div class="project-card-title">
-                Grant Chichester
-              </div>
-              <div class="project-card-description">
-                Logo Design
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div data-controller="project-card-hover">
-          <a href="https://www.fan-find.com/" class="project-card" style="background-image:url(<%= image_path 'projects/FanFind/FanFind-background.png' %>"
-           data-action="mouseover->project-card-hover#displayInfo mouseout->project-card-hover#hideInfo" target="_blank">
-            <div class="project-card-info remove-info" data-project-card-hover-target="cardInfo">
-              <div class="project-card-title">
-                Fan Find
-              </div>
-              <div class="project-card-description">
-                Full-Stack Mobile Web Application Development
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-    </div>
-
-
   </div>
 </div>

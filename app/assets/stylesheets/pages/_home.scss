@@ -12,6 +12,13 @@ main {
   position: relative;
   z-index: 1;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page {
+  max-width: 1640px;
 }
 
 .home-nav-container {
@@ -73,9 +80,16 @@ main {
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+
+.menu-links {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
   a {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5em;
@@ -86,6 +100,13 @@ main {
       color: $light-blue;
     }
   }
+}
+
+.home-menu-exit {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  font-size: 18pt;
 }
 
 .home-info {
