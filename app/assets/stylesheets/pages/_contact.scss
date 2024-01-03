@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // overflow-y: scroll;
+  -webkit-overflow-scroll: touch;
 }
 
 .contact-header {
