@@ -16,6 +16,9 @@ application.register("contact-form", ContactFormController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import MakeScrollableController from "./make_scrollable_controller"
+application.register("make-scrollable", MakeScrollableController)
+
 import MenuController from "./menu_controller"
 application.register("menu", MenuController)
 
