@@ -15,7 +15,7 @@ export default class extends Controller {
       const scrollDistance = window.scrollY
       const lastSectionBottom = lastSection.offsetTop + lastSection.offsetHeight
 
-      if (scrollDistance >= lastSectionBottom) {
+      if (scrollDistance >= lastSectionBottom - 80) {
           footer.style.overflowY = 'scroll'
       } else {
           footer.style.overflowY = 'hidden'
